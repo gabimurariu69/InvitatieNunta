@@ -7,12 +7,11 @@ body {
   align-items: center;
 }
 
-/* Container principal pentru invitație */
 .window-invite {
-  width: 90vw;
-  max-width: 700px;
-  height: 80vh;
-  max-height: 520px;
+  width: 95vw;
+  height: 85vh;
+  max-width: 1100px;
+  max-height: 650px;
   margin: 0 auto;
   position: relative;
   display: flex;
@@ -26,13 +25,26 @@ body {
   transition: width 1.2s cubic-bezier(.42,0,.58,1), height 0.8s cubic-bezier(.42,0,.58,1);
 }
 
-/* Deschis: mărim containerul la maxim pe ecran */
 .window-invite.open {
   width: 98vw;
-  max-width: 1100px;
-  height: 80vh;
-  max-height: 520px;
+  height: 85vh;
+  max-width: 1400px;
+  max-height: 750px;
 }
+
+/* Responsive pentru mobil/tabletă */
+@media (max-width: 700px) {
+  body {
+    align-items: flex-start;
+  }
+  .window-invite,
+  .window-invite.open {
+    width: 99vw;
+    height: 65vw;
+    min-height: 220px;
+    max-width: 99vw;
+    max-height: 90vh;
+  }
 
 /* Aripi laterale */
 .wing {
@@ -162,3 +174,4 @@ body {
   .wing-img-right { width: 98%; height: 98%; }
   .instr { font-size: 1rem; margin-top: 14px; }
 }
+
