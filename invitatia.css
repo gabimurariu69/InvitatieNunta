@@ -1,40 +1,26 @@
-body {
-  background: #ececec;
-  min-height: 100vh;
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+body { background: #ececec; }
 
 /* Container principal pentru invitație (închis: 13x18cm, deschis: 25.6x18cm) */
 .window-invite {
-  width: 40vw;    /* 40% din lățimea ferestrei */
-  height: 60vh;   /* 60% din înălțimea ferestrei */
-  min-width: 320px;
-  min-height: 240px;
-  max-width: 900px;
-  max-height: 700px;
+  width: 325px;   /* 13cm x 25px/cm ≈ 325px */
+  height: 450px;  /* 18cm x 25px/cm ≈ 450px */
   margin: 40px auto 16px auto;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   box-shadow: 0 8px 32px #bbb;
-  overflow: visible;
+  overflow: hidden;
   cursor: pointer;
   background: #fff;
   perspective: 3000px;
   transition: width 1.2s cubic-bezier(.42,0,.58,1), height 0.8s cubic-bezier(.42,0,.58,1);
 }
 
-/* Deschis: mărim containerul la 25.6x18cm (≈ 80vw x 60vh) */
+/* Deschis: mărim containerul la 25.6x18cm (≈ 640px x 450px) */
 .window-invite.open {
-  width: 80vw;
-  height: 60vh;
-  min-width: 480px;
-  max-width: 1400px;
-  max-height: 700px;
+  width: 640px;   /* 25.6cm x 25px/cm ≈ 640px */
+  height: 450px;  /* 18cm x 25px/cm ≈ 450px */
 }
 
 /* Aripi laterale */
@@ -103,69 +89,11 @@ body {
 
 /* Imaginea centrală */
 .center-img {
-  position: absolute;
-  left: 0;
-  top: 0;
+  position: relative;
   width: 100%;
   height: 100%;
-  z-index: 1;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-.main-img {
-  width: 82%;
-  height: 82%;
-  object-fit: contain;
   z-index: 1;
-  transition: width 0.8s, height 0.8s, z-index 0.8s;
-}
-
-/* Animatie de deschidere la click */
-.window-invite.open .wing-left { transform: rotateY(-180deg); }
-.window-invite.open .wing-right { transform: rotateY(180deg); }
-.window-invite.open .main-img {
-  width: 100%;
-  height: 100%;
-  z-index: 3; /* imaginea centrală peste aripi la deschidere */
-}
-
-/* Aripi: fața dispare treptat, spatele apare treptat */
-.window-invite.open .wing-left .wing-front,
-.window-invite.open .wing-right .wing-front {
-  opacity: 0;
-  transition-delay: 0s;
-}
-.window-invite.open .wing-left .wing-back,
-.window-invite.open .wing-right .wing-back {
-  opacity: 1;
-  transition-delay: 0.6s;
-}
-
-/* Stil instrucțiuni */
-.instr {
-  text-align: center;
-  color: #888;
-  font-size: 1.07rem;
-  font-style: italic;
-  margin-top: 20px;
-}
-
-/* Responsive pentru tabletă și mobil */
-@media (max-width: 1024px) {
-  .window-invite,
-  .window-invite.open {
-    width: 98vw;
-    height: 44vh;
-    min-width: 220px;
-    min-height: 120px;
-    max-width: 99vw;
-    max-height: 99vh;
-  }
-  .main-img { width: 98%; height: 98%; }
-  .wing-img,
-  .wing-img-right { width: 98%; height: 98%; }
-  .instr { font-size: 1rem; margin-top: 14px; }
-}
-
 
