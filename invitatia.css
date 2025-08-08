@@ -13,7 +13,7 @@ body { background: #ececec; }
   overflow: hidden;
   cursor: pointer;
   background: #fff;
-  perspective: 3000px;
+  perspective: 4034px;
   transition: width 1.2s cubic-bezier(.42,0,.58,1), height 0.8s cubic-bezier(.42,0,.58,1);
 }
 
@@ -134,13 +134,14 @@ body { background: #ececec; }
 }
 
 /* Responsive pentru mobil/tabletă */
-@media (max-width: 2000px) {
-  .window-invite { width: 196vw; height: 440px; }
-  .window-invite.open { width: 196vw; height: 440px; }
+@media (max-width: 3000px) {
+  .window-invite { width: 400vw; height: 1000px; }
+  .window-invite.open { width: 400vw; height: 1000px; }
   .main-img { width: 90%; height: 90%; }
   .wing-img { width: 97%; height: 97%; }
   .wing-img-right { width: 97%; height: 97%; }
 }
+
 
 
 
