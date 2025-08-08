@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <title>Invitație fereastră față-spate reală</title>
+  <link rel="stylesheet" href="invitatia.css">
+</head>
+<body>
+  <div class="window-invite" id="windowInvite">
+    <!-- Aripa stângă -->
+    <div class="wing wing-left">
+      <div class="wing-front">
+        <img src="https://i.imgur.com/WLy2ExM.jpg" alt="Aripa stanga față" class="wing-img">
+      </div>
+      <div class="wing-back">
+        <img src="POZA_STANGA_SPATE.jpg" alt="Aripa stanga spate" class="wing-img">
+      </div>
+    </div>
+    <!-- Imaginea centrală -->
+    <div class="center-img">
+      <img src="https://i.imgur.com/VvF2cRl.jpeg" alt="Centru" class="main-img">
+    </div>
+    <!-- Aripa dreaptă -->
+    <div class="wing wing-right">
+      <div class="wing-front">
+        <img src="https://i.imgur.com/Fg5UKXM.jpg" alt="Aripa dreapta față" class="wing-img wing-img-right">
+      </div>
+      <div class="wing-back">
+        <img src="POZA_DREAPTA_SPATE.jpg" alt="Aripa dreapta spate" class="wing-img wing-img-right">
+      </div>
+    </div>
+  </div>
+  <p class="instr">Click pe invitație pentru a o deschide!</p>
+  <script>
+    document.getElementById('windowInvite').addEventListener('click', function() {
+      this.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>
