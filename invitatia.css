@@ -134,11 +134,12 @@ body { background: #ececec; }
 }
 
 /* Responsive pentru mobil/tabletă */
-@media (max-width: 700px) {
-  .window-invite { width: 98vw; height: 220px; }
-  .window-invite.open { width: 98vw; height: 220px; }
+@media (max-width: 1400px) {
+  .window-invite { width: 196vw; height: 440px; }
+  .window-invite.open { width: 196vw; height: 440px; }
   .main-img { width: 90%; height: 90%; }
   .wing-img { width: 97%; height: 97%; }
   .wing-img-right { width: 97%; height: 97%; }
 }
+
 
