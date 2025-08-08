@@ -19,8 +19,8 @@ body { background: #ececec; }
 
 /* Deschis: mărim containerul la 25.6x18cm (≈ 640px x 450px) */
 .window-invite.open {
-  width: 1280px;   /* 25.6cm x 25px/cm ≈ 640px */
-  height: 900px;  /* 18cm x 25px/cm ≈ 450px */
+  width: 2017px;   /* 25.6cm x 25px/cm ≈ 640px */
+  height: 1403px;  /* 18cm x 25px/cm ≈ 450px */
 }
 
 /* Aripi laterale */
@@ -141,5 +141,6 @@ body { background: #ececec; }
   .wing-img { width: 97%; height: 97%; }
   .wing-img-right { width: 97%; height: 97%; }
 }
+
 
 
